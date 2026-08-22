@@ -61,13 +61,13 @@ while True:
 
         if opcao == 1 :
             adicionar_nota()
-        resultado = media(notas)
-        if opcao == 2 :
+        elif opcao == 2 :
             lista_de_notas()
         elif opcao == 3 :
             maior_nota(notas)
         elif opcao == 4 :
-            print("A média é: ", resultado)
+            resultado = media(notas)
+            print("A média das notas é:", resultado)
         elif opcao == 5 :
             aprovados(notas)
         elif opcao == 6 :
