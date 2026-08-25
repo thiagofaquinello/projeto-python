@@ -7,5 +7,6 @@ def converter_temperaturas(temperaturas):
         temperaturas[i]=temperatura
         i+=1
     return temperaturas
+
 print(converter_temperaturas(temperaturas))
 
