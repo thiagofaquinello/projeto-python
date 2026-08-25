@@ -1,0 +1,3 @@
+Motor 1500 3
+Sensor 250 12
+Arduino 180 8
