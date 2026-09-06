@@ -80,14 +80,19 @@ def executar_consulta_estoque(resultado):
     else:
         print("Produto não localizado.")
 
-def calcular_valor_produto():
+def calcular_valor_produto(resultado_nome):
+    
+    return resultado_nome["preco"]*resultado_nome["estoque"]
+
+def mostrar_valor_produto(resultado):
+
     resultado_nome = selecionar_produto(resultado)
-    return resultado_nome["preco"]*resultado_nome["estoque"], resultado_nome
-
-def mostrar_valor_produto():
-
-    valor_total, resultado_nome = calcular_valor_produto()
-    print("Produto: ",resultado_nome["nome"]," \n","Valor do estoque: ",valor_total)
+    if resultado_nome is not None:
+        valor_total = calcular_valor_produto(resultado_nome)
+        print("Produto:", resultado_nome["nome"])
+        print("Valor do estoque:", valor_total)
+    else:
+        print("Produto não localizado.")
 
 resultado = carregar_produtos()
 
@@ -123,7 +128,7 @@ while True:
             salvar_produtos(resultado)
             print(alteracao)
         elif opcao == 5:
-            mostrar_valor_produto()
+            mostrar_valor_produto(resultado)
         elif opcao == 6:
             break
         else:
