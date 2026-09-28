@@ -9,6 +9,7 @@ def menor_produto(produtos):
 
     if produtos:
         menor = produtos[0]["estoque"]
+        menor_nome = produtos[0]["nome"]
         for produto in produtos:
             if produto["estoque"]<menor:
                 menor=produto["estoque"]

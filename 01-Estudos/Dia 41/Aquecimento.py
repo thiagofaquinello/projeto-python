@@ -1,8 +1,8 @@
-#numeros = [8, 15, 3, 27, 11]
-numeros = []
+numeros = [8, 15, 3, 27, 11]
+#numeros = []
 def maior_numero(numeros):
     if numeros:
-        maior = 0
+        maior = numeros[0]
         for numero in numeros:
             if numero>maior:
                 maior = numero
