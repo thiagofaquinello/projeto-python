@@ -12,6 +12,7 @@ def relatorio(sensores):
     if sensores:
         estado_critico = []
         maior_valor = sensores[0]["valor"]
+        nome_sensor = sensores[0]["nome"]
         for sensor in sensores:
             resultado1 = acima_limite(sensor)
             if resultado1:
