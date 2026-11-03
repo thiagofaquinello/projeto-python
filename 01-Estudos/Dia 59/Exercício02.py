@@ -39,7 +39,8 @@ assert len(historico_teste)==3
 assert historico_teste[0]["temperatura"]==72
 assert historico_teste[1]["temperatura"]==90
 assert historico_teste[2]["temperatura"]==76
-assert historico_teste[3]["sensor"]=="D"
-
+assert "D" not in [leitura["sensor"] for leitura in resultado]
+sensores = [leitura["sensor"] for leitura in resultado]
+assert len(set(sensores)) == len(resultado)
 
 
