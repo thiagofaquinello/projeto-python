@@ -75,8 +75,6 @@ def atualizar_sensores(sensores, novas_leituras):
    
     return sensores
 
-
-
 resultado = analisar_sensores(sensores)
 
 assert resultado["total"] == 4
